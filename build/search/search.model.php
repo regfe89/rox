@@ -1414,7 +1414,7 @@ LIMIT 1
             $conn->setParams(array('host' => 'localhost', 'port' => 9306));
 
             $sphinxQL = new SphinxQL($conn);
-            $match = new Match($sphinxQL);
+            $match = new Detail($sphinxQL);
             $match->match($location);
 
             $query = $sphinxQL
@@ -1461,7 +1461,7 @@ LIMIT 1
         $conn->setParams(array('host' => 'localhost', 'port' => 9306));
 
         $sphinxQL = new SphinxQL($conn);
-        $match = new Match($sphinxQL);
+        $match = new Detail($sphinxQL);
         $match->match($country);
 
         $query = $sphinxQL
@@ -1489,7 +1489,7 @@ LIMIT 1
         $conn->setParams(array('host' => 'localhost', 'port' => 9306));
 
         $sphinxQL = new SphinxQL($conn);
-        $match = new Match($sphinxQL);
+        $match = new Detail($sphinxQL);
         $match->match($adminUnit);
 
         $query = $sphinxQL
@@ -1732,4 +1732,3 @@ LIMIT 1
         }
     }
 }
-
